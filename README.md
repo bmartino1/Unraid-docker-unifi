@@ -1,4 +1,5 @@
-TESTING! Not Meant for Production Use
+TESTING! Not Meant for Production Use. tsting https://hub.docker.com/r/bmmbmm01/unraid-unifi follwoing lxc info.
+https://forums.unraid.net/topic/78060-support-linuxserverio-unifi-controller/page/59/#comment-1381724
 
 # 🍟 Ubuntu - unifi
 Curent v 8.2.93 (Linux) from https://ui.com/download/releases/network-server
@@ -50,6 +51,9 @@ THIS IS A FORK FOR TESTING! Thanks to 11Notes and PeteAsking:
 https://forums.unraid.net/topic/147455-support-unifi-controller-unifi-unraid-reborn/
 
 * <sup>1</sup> This image will automatically disable anonymous telemetry collected by Ubiquiti by adding a flag (`config.system_cfg.1=system.analytics.anonymous=disabled`) to each sites `config.properties`. You will still have to disable telemetry in the global settings too, to disable *all* telemetry. You can check your telemetry status by SSH’ing into an access point and checking ` grep analytics /tmp/system.cfg`, the output should read `disabled`. Make sure to also DNS block the FQDN `trace.svc.ui.com` in your DNS blocker.
+
+CREDITS:
+WGstarks/PeteAsking/11notes Thanks for all your work and support.
 
 # ElevenNotes<sup>™️</sup>
 This image is provided to you at your own risk. Always make backups before updating an image to a new version. Check the changelog for breaking changes.
