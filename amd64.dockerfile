@@ -11,8 +11,9 @@
   COPY --from=util /util/linux/shell/elevenLogJSON /usr/local/bin
   ENV DEBIAN_FRONTEND=noninteractive
   ENV APP_NAME="unifi"
-  ENV APP_VERSION="8.1.127"
+  ENV APP_VERSION="8.2.93"
   ARG APP_HASH="-810cd1e59a"
+#not sure where 11 notes is getting a hash....
   ENV APP_ROOT=/unifi
 
 # :: Run
@@ -27,8 +28,10 @@
     RUN set -ex; \
       mkdir -p ${APP_ROOT};
 
+#https://dl.ui.com/unifi/8.2.93/unifi_sysvinit_all.deb
   # https://community.ui.com/RELEASES UniFi Network Application
-    ADD https://dl.ui.com/unifi/${APP_VERSION}${APP_HASH}/unifi_sysvinit_all.deb /tmp/unifi.deb
+  #  ADD https://dl.ui.com/unifi/${APP_VERSION}${APP_HASH}/unifi_sysvinit_all.deb /tmp/unifi.deb
+    ADD https://dl.ui.com/unifi/8.2.93/unifi_sysvinit_all.deb /tmp/unifi.deb
 
     RUN set -ex; \
       apt install -y \
